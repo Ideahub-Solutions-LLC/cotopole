@@ -66,7 +66,7 @@ class HomeScreen extends ConsumerWidget {
                     ),
                     error: (e, _) => Text('$e'),
                     data: (list) => list.isEmpty
-                        ? GlassCard(
+                        ? const GlassCard(
                             child: EmptyState(
                               icon: Icons.contact_page_rounded,
                               title: 'No captures yet',

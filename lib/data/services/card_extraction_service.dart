@@ -54,7 +54,7 @@ class CardExtractionService {
         (qrDraft.firstName.isNotEmpty || qrDraft.lastName.isNotEmpty) &&
         (qrDraft.phone.isNotEmpty || qrDraft.email.isNotEmpty);
     if (qrComplete) {
-      return ExtractionResult(draft: qrDraft!, method: CaptureMethod.qr);
+      return ExtractionResult(draft: qrDraft, method: CaptureMethod.qr);
     }
 
     // 2) Text recognition

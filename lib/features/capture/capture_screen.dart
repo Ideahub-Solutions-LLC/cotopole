@@ -280,7 +280,7 @@ class _SlotSection extends StatelessWidget {
                 Expanded(
                   child: Text(title, style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w700)),
                 ),
-                if (trailing != null) trailing!,
+                ?trailing,
               ],
             ),
           ),

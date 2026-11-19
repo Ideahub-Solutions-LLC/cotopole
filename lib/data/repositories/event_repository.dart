@@ -69,7 +69,7 @@ class EventRepository {
     final rows = await _db.query(
       'events',
       where: "name_key = ? AND status = 'active'${excludeId != null ? ' AND id != ?' : ''}",
-      whereArgs: [_nameKey(name), if (excludeId != null) excludeId],
+      whereArgs: [_nameKey(name), ?excludeId],
     );
     for (final r in rows) {
       final e = Event.fromRow(r);
